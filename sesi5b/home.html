@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile and Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/training01/Sesi5/home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/training01/Sesi5/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/training01/Sesi5/portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/training01/Sesi5/blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/training01/Sesi5/team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/training01/Sesi5/contact.html">Contact</a>
+              </li>
+              
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div style="max-width: 1080px;" class="d-block mx-auto">
+        <div class="container-fluid bg-white rounded shadow my-5 p-4">
+            <div class="row">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="img img-fluid rounded-circle" src="./images/profil.png" alt="Profile Image" class="profile-image" />
+                        </div>
+                        <div class="col-9">
+                            <h2 id="fullname">Feri S Tarigan</h2>
+                            <p id="job">Front End Designer</p>
+                            <div class="buttons">
+                                <button class="btn btn-primary">Kontak</button>
+                                <button class="btn btn-secondary">Resume</button>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col d-flex justify-content-start">
+                            <div style="width: 1px; background:#a1a1a1; margin: 10px 10px"></div>
+                            <div>
+                                <p><strong>Availability</strong></p>
+                                <p><strong>Usia</strong></p>
+                                <p><strong>Lokasi</strong></p>
+                                <p><strong>Pengalaman</strong></p>
+                                <p><strong>Email</strong></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p id="job_type"> Full Time</p>
+                            <p id="age">19</p>
+                            <p id="city">Jakarta</p>
+                            <p id="year">2 Tahun</p>
+                            <p id="email">email@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <label for="fname1">Nama</label>
+            <input class="input_max" type="text" id="fname1" name="fname1" placeholder="Nama">
+            
+            <label for="role">Role</label>
+            <input class="input_max" type="text" id="role" name="role" placeholder="Role">
+            
+            <label for="availability">Availability</label>
+            <input class="input_max" type="text" id="availability" name="availability" placeholder="Availability">
+
+            <label for="age">Usia</label>
+            <input class="input_max" type="text" id="age_form" name="age" placeholder="Age">
+
+            <label for="availability">Lokasi</label>
+            <input class="input_max" type="text" id="location" name="lokasi" placeholder="Lokasi">
+
+            <label for="availability">Years Experience</label>
+            <input class="input_max" type="text" id="experience" name="experience" placeholder="Experience">
+            
+            <label for="email">Email</label>
+            <input class="input_max" type="email" id="email_form" name="email" placeholder="Email">
+            
+            <button class="button button1" onclick="insertProfile()">SUBMIT</button>
+        </div>
+    </div>
+
+    <script>
+        // Profile
+        let job_elp = document.getElementById('job')
+        let fullname_elp = document.getElementById('fullname')
+        let job_type_elp = document.getElementById('job_type')
+        let age_epl = document.getElementById('age')
+        let city_elp = document.getElementById('city')
+        let year_elp = document.getElementById('year')
+        let email_elp = document.getElementById('email')
+
+        // Form
+        let fname_elf = document.getElementById('fname1') 
+        let role_elf = document.getElementById('role')
+        let job_type_elf = document.getElementById('availability')
+        let age_elf = document.getElementById('age_form')
+        let city_elf = document.getElementById('location')
+        let year_elf = document.getElementById('experience')
+        let email_elf = document.getElementById('email_form')
+
+        const moveProfileToForm = () => {
+            fname_elf.value = fullname_elp.innerHTML
+            role_elf.value = job_elp.innerHTML
+            job_type_elf.value = job_type_elp.innerHTML
+            age_elf.value = age_epl.innerHTML
+            city_elf.value = city_elp.innerHTML
+            year_elf.value = year_elp.innerHTML
+            email_elf.value = email_elp.innerHTML 
+        }
+        moveProfileToForm()
+
+        const insertProfile = () => {
+            fullname_elp.innerHTML = fname_elf.value
+            job_elp.innerHTML = role_elf.value
+            job_type_elp.innerHTML = job_type_elf.value
+            age_epl.innerHTML = age_elf.value
+            city_elp.innerHTML = city_elf.value
+            year_elp.innerHTML = year_elf.value
+            email_elp.innerHTML  = email_elf.value
+        }
+
+                
+        fetch("https://jsonplaceholder.typicode.com/users") 
+            .then(response => response.json()) 
+            // .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                document.getElementById('fullname').innerHTML = data[0].name
+            });
+
+
+        
+    </script>
+</body>
+</html>
